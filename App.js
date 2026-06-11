@@ -52,6 +52,9 @@ import { useFonts } from 'expo-font';
 import { useEffect } from 'react';
 import "./global.css"
 
+import AppNavigator from './Navigation/Appnavigator'; 
+
+
 SplashScreen.preventAutoHideAsync();
 
 const customFonts = {
@@ -80,14 +83,6 @@ export default function App() {
   }
 
   return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text className="text-5xl text-center font-bold text-primary" style={{ fontFamily: "Quicksand-Medium" }} >
-
-        {/* style={{ fontFamily: "Quicksand-Bold" }} */}
-        {/* font-quickSand-bold */}
-        Welcome to Nativewind!
-      </Text>
-      <StatusBar style="auto" />
-    </View>
+    <AppNavigator />
   );
 }
